@@ -55,7 +55,10 @@
             
             
         }
-        
+        li a{
+            text-decoration: none;
+            color: black;
+        }
 
         .part1 li{
             list-style-type: none;
@@ -78,14 +81,14 @@
         .textitem3{
             font-family: "Platypi", serif;
             font-size: 60px;
-            animation: slide-left 3s linear ;
+            animation: slide-left 2s linear ;
            
         }
 
         .textitem4{
             font-family: "Platypi", serif;
             font-size: 60px;
-            animation: slide-right 3s linear;
+            animation: slide-right 2s linear;
         }
         .part2{
             display: flex;
@@ -193,17 +196,17 @@
         }
 
         .left-animation{
-            animation: left-slide 2s linear;
+            animation: left-slide 4s linear;
           
         }
 
         .right-animation{
-            animation: right-slide 2s linear;
+            animation: right-slide 4s linear;
            
         }
 
         .bottom-animation{
-            animation:slide-bottom 2s linear;
+            animation:slide-bottom 4s linear;
             
         }
 
@@ -434,7 +437,7 @@
         .part1{
             display: flex;
             justify-content: flex-start;
-            font-size:16px;
+            font-size:13px;
           
             
         }
@@ -470,7 +473,7 @@
         }
         .innerpart5{
             flex-direction: column;
-            background-image: url(https://i0.wp.com/www.zmo.ai/wp-content/uploads/2023/09/White-simple-textured-design-background-scaled.jpg?ssl=1);
+            background-image: url(./white-background.webp);
             
         }
         .innerpart52{
@@ -538,11 +541,11 @@
         <div class="part1">
             <h1>Jevelin</h1>
             <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Menu</li>
-                <li>Reservation</li>
-                <li>Contacts</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+               
+                <li><a href="#contact">Contacts</a></li>
             
             </ul>
         </div>
@@ -607,7 +610,7 @@
             
             </div>
         </div>
-        <div class="part6combine">
+        <div class="part6combine" id="about">
             <!----------------------Team Members---------------------------->
         <div class="part3">
             
@@ -643,7 +646,7 @@
         </div>
         </div>
         </div>
-        <div class="background7">
+        <div class="background7" id="menu">
         <div class="part7">
             <div class="part3">
             
@@ -726,7 +729,7 @@
         </div>
         </div>
                         <!------------- Restaurent timings --------------->
-        <div class="part8">
+        <div class="part8" id="contact">
             <div class="leftpart">
                 <div class="text-design">
                     How to Find<br>& contact Us
