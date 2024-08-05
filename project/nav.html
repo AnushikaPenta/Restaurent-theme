@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <style>
+      .sidebar{
+        position: fixed;
+        top:0;
+        right:0;
+        height:100vh;
+        width:250px;
+        z-index: 999;
+        background-color: rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+.sidebar a{
+    width:100%;
+    height: 100vh;
+}
+.menu-button{
+    display: none;
+    font-size: 26px;
+}
+
+.fa-xmark{
+    font-size: 26px;
+}
+
+@media(max-width:500px)
+{
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display:black;
+    }
+}
+    </style>
+   
+
+</head>
+<body>
+  <div class="sidebar">
+    <a><i onclick= hideSidebar() class="fa-solid fa-xmark"></i></a>
+    <a href="#" class="item">Basic Needs</a>
+    <a href="#" class="item">K12</a>
+    <a href="#" class="item">Higher Ed </a>
+    <a href="#" class="item">Families</a>
+    <a href="#" class="item">Enterprise</a>
+    <a href="#" class="item">Login </a>
+    <a href="#" class="item">Join now</a>
+  </div>
+
+  <div class="nav-container">
+  <div><img class="logo" src="https://www.tbh.us/img/favicon.png" height="30px" width="30px">
+    <span class="tbh">tbh</span>
+  </div>
+
+  <div class="middle-items">
+     <a  href="#" class="item hideOnMobile">Basic Needs</a>
+     <a  href="#" class="item hideOnMobile">K12</a>
+     <a  href="#" class="item hideOnMobile">Higher Ed </a>
+     <a  href="#" class="item hideOnMobile">Families</a>
+     <a  href="#" class="item hideOnMobile">Enterprise</a>
+  </div>
+
+  <div class="last-items">
+      <a href="#" class="login log-in hideOnMobile">Login </a>
+      <a href="#" class="login j-in hideOnMobile">Join now</a>
+      <a class="menu-button"><i onclick=showSidebar() class="fa fa-bars"></i></a>
+  </div>
+
+</div>
+<script>
+  function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+  }
+
+function hideSidebar(){
+     const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='none'
+}
+</script>
+</body>
+</html>
